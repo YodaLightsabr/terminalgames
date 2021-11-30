@@ -39,6 +39,6 @@ export default async function Command (args) {
   if (computerChoice == option) {
     return console.log(`It's a ${formatting.title('tie!')}`);
   }
-  if (computerChoice == option + 1 || computerChoice == option - 2) return console.log(`${formatting.title('Computer')} wins!`);
+  if (computerChoice == (option + 1) % 3) return console.log(`${formatting.title('Computer')} wins!`);
   console.log(`${formatting.title('You')} win!`);
 }
