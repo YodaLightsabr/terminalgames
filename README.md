@@ -1,5 +1,8 @@
 # `>_ 🎮  Terminal Games!`
 An expanding selection of games to play in your terminal.
+```
+npm i -g cligames && cligames
+```
 
 ## `>_` Current Commands
 - `help` - Help menu

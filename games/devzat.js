@@ -15,5 +15,6 @@ export default async function Command (args) {
   let name = prompt('Your name: '); // Make sure to use a type of formatting when referencing a name or something that could change
   if (!name) name = 'TerminalGames_' + (Math.floor(Math.random() * 10000)).toString().substring(0, 3);
   await shell('ssh', [name + '@devzat.hackclub.com']);
+  console.log("If it's not working, you might have to run ssh-keygen.");
   //run(`ssh ${name}@devzat.hackclub.com`);
 }
