@@ -19,11 +19,12 @@ export default async function Command (args) {
     games[gameData.game] = {
       execute: gameData.default,
       description: gameData.description || 'No info provided',
-      name: gameData.game
+      name: gameData.game,
+      flags: gameData.flags || []
     };
   }
   console.log('Game Menu');
   console.log(
-    Object.values(games).map(({ description, name }) => `${formatting.command(name)} - ${description}`).join('\n')
+    Object.values(games).filter(({ flags }) => !flags.includes('hidden')).map(({ description, name }) => `${formatting.command(name)} - ${description}`).join('\n')
   );
 }

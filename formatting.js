@@ -85,7 +85,7 @@ export const backgroundColorMap = {
 export function all () {
   let output = '';
   for (const color in colorMap) {
-    output += chalk[colorMap[color]]('▄');
+    if (color !== '-') output += chalk[colorMap[color]]('▄');
   }
   return output;
 }
@@ -133,4 +133,77 @@ export function parseColorBlock (colorBlock) {
     return row.map(item => parseColorCode(item)).join('');
   }).join('\n');
   return outlines;
+}
+
+export function key () {
+  let letters = {
+
+  "a": "black",
+  "s": "red",
+  "d": "yellow",
+  "f": "green",
+  "g": "cyan",
+  "h": "blue",
+  "j": "magenta",
+  "k": "white",
+
+  // Bright colors
+  "z": "blackBright",
+  "x": "redBright",
+  "c": "yellowBright",
+  "v": "greenBright",
+  "b": "cyanBright",
+  "n": "blueBright",
+  "m": "magentaBright",
+  ",": "whiteBright",
+  };
+  let output = '';
+  for (const letter in letters) {
+    output += chalk[letters[letter]](letter);
+  }
+  return output;
+}
+
+export function keyTop () {
+  let letters = {
+
+  "a": "black",
+  "s": "red",
+  "d": "yellow",
+  "f": "green",
+  "g": "cyan",
+  "h": "blue",
+  "j": "magenta",
+  "k": "white",
+  };
+  let output = '';
+  for (const letter in letters) {
+    output += chalk[letters[letter]](letter);
+  }
+  return output;
+}
+
+export function keyBottom () {
+  let letters = {
+
+
+  // Bright colors
+  "z": "blackBright",
+  "x": "redBright",
+  "c": "yellowBright",
+  "v": "greenBright",
+  "b": "cyanBright",
+  "n": "blueBright",
+  "m": "magentaBright",
+  ",": "whiteBright",
+  };
+  let output = '';
+  for (const letter in letters) {
+    output += chalk[letters[letter]](letter);
+  }
+  return output;
+}
+
+export function parseModel (saveCode) {
+  return parseColorBlock(decodeURIComponent(data));
 }
