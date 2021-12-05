@@ -1,14 +1,14 @@
 {
   "name": "cligames",
-  "version": "0.1.2",
-  "description": "",
+  "version": "0.1.3",
+  "description": "An expanding selection of games to play in your terminal",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "author": "",
-  "license": "ISC",
+  "author": "YodaLightsabr",
+  "license": "MIT",
   "dependencies": {
     "chalk": "^5.0.0",
     "prompt-sync": "^4.2.0",
@@ -17,5 +17,20 @@
   "bin": {
     "games": "index.js",
     "cligames": "index.js"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YodaLightsabr/terminalgames.git"
+  },
+  "keywords": [
+    "games",
+    "cli",
+    "terminal-games",
+    "fun"
+  ],
+  "bugs": {
+    "url": "https://github.com/YodaLightsabr/terminalgames/issues"
+  },
+  "homepage": "https://github.com/YodaLightsabr/terminalgames#readme"
 }
