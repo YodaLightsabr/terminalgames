@@ -73,3 +73,5 @@ function draw() {
   fill(255, 0, 0);
   rect(food.x, food.y, 1, 1);
 }
+
+export function main () {} // Required export
