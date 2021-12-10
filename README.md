@@ -22,3 +22,4 @@ To design an image or model for a game, you can play the `util:colormaker` game.
 ## `📝` To-Do List
 - Add some more universal text formatting
 - Add games
+- Add more commands
